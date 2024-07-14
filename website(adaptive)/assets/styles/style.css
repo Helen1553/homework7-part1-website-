@@ -1,0 +1,257 @@
+html{
+    font-size: 40px;
+}
+
+.container {
+    display: grid;
+    grid-template: 10% 1fr 15%/1fr 20%;
+
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+
+    max-width: 100%;
+}
+
+.header {
+    grid-area: 1/1/2/3;
+    align-content: center;
+
+    background-color: lightgray;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main {
+    grid-area: 2/1/3/2;
+
+    background-color: rgb(241, 221, 181);
+}
+
+
+.sidebar {
+    grid-area: 2/2/3/3;
+    align-content: center;
+
+    background-color: rgb(195, 231, 195);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template: 2fr 1fr 1fr/1fr 1fr;
+    gap: 1rem;
+
+    width: 98%;
+    height: 96%;
+    background-color: rgb(241, 221, 181);
+}
+
+.grid-item-m1 {
+    grid-area: 1/1/2/3;
+    align-content: center;
+
+    background-color: rgb(241, 221, 181);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.grid-item-m2 {
+    grid-area: 2/1/3/2;
+    align-content: center;
+
+    background-color: rgb(238, 194, 113);
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.grid-item-m3 {
+    grid: 2/2/3/3;
+    align-content: center;
+
+    background-color: rgb(238, 194, 113);
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.grid-item-m4 {
+    grid-area: 3/1/4/3;
+    align-content: center;
+
+    background-color: rgb(238, 194, 113);
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.footer {
+    grid-area: 3/1/4/3;
+
+    background-color: lightgray;
+    font-weight: bold;
+}
+
+.footer-grid-container {
+    display: grid;
+    grid-template: 1fr/1fr 1fr 1fr 1fr;
+    gap: 1rem;
+
+    width: 99%;
+    height: 85%;
+    background-color: lightgray;
+    padding-top: 10px;
+}
+
+.grid-item-f1 {
+    grid-area: 1/1/2/2;
+    align-content: center;
+
+    background-color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.grid-item-f2 {
+    grid-area: 1/2/2/3;
+    align-content: center;
+
+    background-color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.grid-item-f3 {
+    grid-area: 1/3/2/4;
+    align-content: center;
+
+    background-color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.grid-item-f4 {
+    grid-area: 1/4/2/5;
+    align-content: center;
+
+    background-color: white;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width:1024px) {
+    .footer{
+        grid-area: 3/1/4/3;
+        background-color: lightgray;
+        font-weight: bold;
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        grid-template: 15% 1fr 15%/1fr;
+    }
+
+    .header{
+        font-size: 0.65rem;
+    }
+
+    .sidebar {
+        grid-area: 3/1/4/2;
+
+        font-size: 0.65rem;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .grid-item-m1{
+        font-size: 0.65rem;
+    }
+    .grid-item-m2, .grid-item-m3, .grid-item-m4 {
+        font-size: 0.4rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .container {
+        grid-template: 15% 1fr/1fr;
+    }
+
+    .header{
+        font-size: 0.5rem;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .footer{
+        display: none;
+    }
+
+    .main-grid-container {
+        grid-template: 1fr 1fr 1fr 1fr/1fr;
+    }
+
+    .grid-item-m1 {
+        grid-area: 1/1/2/2;
+        font-size: 0.5rem;
+    }
+    
+    .grid-item-m2 {
+        grid-area: 2/1/3/2;
+    }
+    
+    .grid-item-m3 {
+        grid: 3/1/4/2;
+    }
+    
+    .grid-item-m4 {
+        grid-area: 4/1/5/2;
+    }
+
+    .grid-item-m2, .grid-item-m3, .grid-item-m4 {
+        font-size: 0.35rem;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .container {
+        grid-template: 30% 1fr/1fr;
+    }
+    .header{
+        font-size: 0.5rem;
+    }
+    .sidebar {
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+
+    .main-grid-container {
+        grid-template: 1fr 1fr/1fr;
+    }
+
+    .grid-item-m1 {
+        grid-area: 1/1/2/2;
+        font-size: 0.5rem;
+    }
+    
+    .grid-item-m2 {
+        grid-area: 2/1/3/2;
+        font-size: 0.35rem;
+        
+    }
+    
+    .grid-item-m3 {
+        display: none;
+    }
+    
+    .grid-item-m4 {
+        display: none;
+    }
+}
